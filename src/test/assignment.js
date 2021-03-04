@@ -61,10 +61,11 @@ describe('Assignment API endpoints', () => {
 
     // Delete sample assignment and course.
     afterEach((done) => {
-        deleteAssignment = Assignment.deleteOne({ _id: SAMPLE_OBJECT_ID_Assignment1 })
+        deleteAssignment1 = Assignment.deleteOne({ _id: SAMPLE_OBJECT_ID_Assignment1 })
+        deleteAssignment2 = Assignment.deleteOne({ _id: SAMPLE_OBJECT_ID_Assignment2 })
         deleteCourse = Course.deleteOne( {_id: SAMPLE_OBJECT_ID_Course })
 
-        Promise.all([deleteAssignment, deleteCourse])
+        Promise.all([deleteAssignment1, deleteAssignment2, deleteCourse])
         .then(() => {
             done()
         })

@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+        {{#if currentUser}}
+        <ul>
+            {{#each courses}}
+                <li class="list-group-item">
+                    <!-- {{this}} -->
+                    {{#each this}}
+                        <a href="/courses/{{this._id}}" class="lead"> {{this.course}} </a>
+                    {{/each}}
+                </li>
+            {{/each}}
+        {{else}}
+        To view courses and assignments login or sign-up
+
+        {{/if}}
+
+        </ul>
+    </div>
+</div>

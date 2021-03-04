@@ -3,7 +3,7 @@ const Schema = mongoose.Schema
 
 const CourseSchema = new Schema({
     course: { type: String, required: true },
-    assignments : [{ type: Schema.Types.ObjectId, ref: "Assignment" }]
+    assignments : [{ type: Schema.Types.ObjectId, ref: "Assignment", required: false }]
   })
 
 CourseSchema.pre('findOne', function (next) {

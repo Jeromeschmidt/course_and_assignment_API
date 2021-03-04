@@ -33,23 +33,26 @@ router.get('/:assignmentId', (req, res) => {
     })
 })
 
-/** Route to add a new message. */
+/** Route to add a new assignment. */
 router.post('/', (req, res) => {
     let assignment = new Assignment(req.body)
     assignment.save()
+    // .then(assignmentResult => {
+    //     res.redirect(`/`)
     .then(assignment => {
         return Course.findById(assignment.course)
     })
     .then(course => {
-        // console.log(user)
+    //     // console.log(user)
         course.assignments.unshift(assignment)
         return course.save()
-    })
+    // })
     .then(() => {
         return res.send(assignment)
     }).catch(err => {
         throw err.message
     })
+})
 })
 
 /** Route to update an existing assignment. */

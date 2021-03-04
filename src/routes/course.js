@@ -17,22 +17,29 @@ router.get('/', (req, res) => {
     });
 })
 
-/** Route to get one user by id. */
+/** Route to get one course by id. */
 // GET localhost:3000/users/:userId
 router.get('/:courseId', (req, res) => {
+    var currentUser = req.user;
+
     Course.findOne({_id: req.params.courseId})
     .then(result => {
         res.json(result)
+        // res.redirect(`/courses/result`);
+        // res.redirect('/courses/');
+        // res.render("layouts/course-show", { result, currentUser });
     }).catch(err => {
         throw err.message
     })
 })
 
-/** Route to add a new user to the database. */
+/** Route to add a new course to the database. */
 router.post('/', (req, res) => {
     // POST localhost:3000/users/
     let course = new Course(req.body)
     course.save().then(courseResult => {
+        // res.redirect(`/`);
+        // res.redirect(`/courses/${course._id}`);
         return res.json({course: courseResult})
     }).catch((err) => {
         throw err.message
@@ -46,6 +53,7 @@ router.put('/:courseId', (req, res) => {
         return Course.findOne({_id: req.params.courseId})
     }).then((course) => {
         return res.json({course})
+        // res.render("layouts/course-show", { course, currentUser });
     }).catch((err) => {
         throw err.message
     })

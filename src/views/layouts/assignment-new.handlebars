@@ -1,0 +1,28 @@
+<body>
+    <div class="row">
+        <div class="col-sm-4 col-sm-offset-4">
+            <form action="/assignments" method="post">
+            <legend>New Assignment</legend>
+            <div class="form-group">
+              <label for="course-name">Name</label>
+              <input name="name" type="text" class="form-control" id="name" placeholder="name">
+            </div>
+            <div class="form-group">
+              <label for="link">Link</label>
+              <input name="link" type="text" class="form-control" id="link" placeholder="link">
+            </div>
+            <div class="form-group">
+              <label for="dueDate">Due Date</label>
+              <input name="dueDate" type="text" class="form-control" id="dueDate" placeholder="dueDate">
+            </div>
+            <!-- <div class="form-group">
+              <label for="course">Course</label>
+              <input name="course" type="text" class="form-control" id="course" placeholder="course">
+            </div> -->
+            <div class='text-right'>
+                <button type="submit" class="btn btn-primary">Create Assignment</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</body>

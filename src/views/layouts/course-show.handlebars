@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
+    <!-- <a href="{{course.url}}" class="lead">{{course.course}}</a>
+    <p>{{post.author.username}}</p>
+    <p>{{post.summary}}</p>
+    <form action="/course/{{post._id}}/comments" method="post">
+      <textarea class='form-control' name="content" placeholder="Comment"></textarea>
+      <div class="text-right">
+        <button type="submit" class="btn btn-primary">Save</button>
+      </div>
+    </form>
+    {{#each post.comments}}
+      {{> comment comment=this postId=../post._id}}
+    {{/each}} -->
+
+    {{#if currentUser}}
+        <a href="/assignment/new" class="btn btn-primary navbar-btn">New Assignment</a>
+        <ul>
+            <li class="list-group-item">
+                {{result}}
+                {{#each result}}
+                    {{this.assignments}}
+                {{/each}}
+            </li>
+        </ul>
+    {{else}}
+    To view courses and assignments login or sign-up
+
+    {{/if}}
+  </div>
+</div>
