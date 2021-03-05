@@ -34,6 +34,69 @@
 
     <div class="container">
         {{{body}}}
+        <table style="width:100%">
+          <tr>
+            <th>Assignment Route</th>
+            <th>Method</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>/assignments</td>
+            <td>GET</td>
+            <td>Gets all assignments</td>
+          </tr>
+          <tr>
+            <td>/assignments/{assignmentId}</td>
+            <td>GET</td>
+            <td>Get one assignment by id</td>
+          </tr>
+          <tr>
+            <td>/assignments</td>
+            <td>Post</td>
+            <td>add a new assignment</td>
+          </tr>
+          <tr>
+            <td>/assignments/{assignmentId}</td>
+            <td>PUT</td>
+            <td>update an existing assignments</td>
+          </tr>
+          <tr>
+            <td>/assignments/{assignmentId}</td>
+            <td>DELETE</td>
+            <td>delete an assignment</td>
+          </tr>
+
+          <tr>
+            <th>CourseRoute</th>
+            <th>Method</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>/courses/</td>
+            <td>GET</td>
+            <td>Gets all Courses</td>
+          </tr>
+          <tr>
+            <td>/courses/{courseId}</td>
+            <td>GET</td>
+            <td>Get one course by id</td>
+          </tr>
+          <tr>
+            <td>/courses</td>
+            <td>Post</td>
+            <td>add a new course</td>
+          </tr>
+          <tr>
+            <td>/courses/{courseId}</td>
+            <td>PUT</td>
+            <td>update an existing course</td>
+          </tr>
+          <tr>
+            <td>/courses/{courseId}</td>
+            <td>DELETE</td>
+            <td>delete a course</td>
+          </tr>
+        </table>
     </div>
 
     <!-- Bootstrap -->

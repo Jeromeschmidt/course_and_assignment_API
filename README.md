@@ -1,6 +1,6 @@
 # Course and Assignment API
 
-This API allows users to add courses and assignments that can only be viewed by other users
+This API allows users to add courses and assignments that can only be viewed by other users.
 
 API available at https://course-and-hw-api.herokuapp.com/
 
@@ -12,9 +12,9 @@ API available at https://course-and-hw-api.herokuapp.com/
 | ----------- | ----------- | ----------- |
 |/assignments |GET | Gets all assignments |
 |/assignments/{assignmentId} |GET | Get one assignment by id|
-|/assignments | POST | add a new assignments |
+|/assignments | POST | add a new assignment |
 |/assignments/{assignmentId}| PUT | update an existing assignments|
-|/assignments/{assignmentId} | DELETE | delete a assignments |
+|/assignments/{assignmentId} | DELETE | delete an assignment |
 
 {assignmentsId} = Route parameter = `:assignmentsId`
 #### Courses
