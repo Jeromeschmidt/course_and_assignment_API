@@ -112,7 +112,7 @@ require('./routes/auth.js')(app)
 Course = require('./models/course');
 Assignment = require('./models/assignment');
 
-app.get("/", (req, res) => {
+app.get("/", (req, res) => { 
   var currentUser = req.user;
 
   Course.find({})
