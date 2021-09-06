@@ -1,8 +1,6 @@
 const express = require('express')
 const router = express.Router();
 
-// User -> course
-// message -> assignment
 const Course = require('../models/course')
 const Assignment = require('../models/assignment')
 
